@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>Your Spec Title</title>
+  <title>European Higher Education Institution Identifiers</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
@@ -1322,14 +1322,8 @@ Possible extra rowspan handling
 	}
 </style>
   <meta content="Bikeshed version 89ebb6ab, updated Fri Oct 9 15:32:07 2020 -0700" name="generator">
-  <link href="Your spec url" rel="canonical">
-  <meta content="617e4c5ae6f2d0236e07b578544cd044455d42b9" name="document-revision">
-<style>/* darkmode */
-
-            @media (prefers-color-scheme: dark) {
-                html { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cg fill='%23100808' transform='translate(200 200) rotate(-45) translate(-200 -200)' stroke='%23100808' stroke-width='3'%3E%3Ctext x='50%25' y='220' style='font: bold 70px sans-serif; text-anchor: middle; letter-spacing: 6px;'%3EUNOFFICIAL%3C/text%3E%3Ctext x='50%25' y='305' style='font: bold 70px sans-serif; text-anchor: middle; letter-spacing: 6px;'%3EDRAFT%3C/text%3E%3C/g%3E%3C/svg%3E") !important; }
-            }
-            </style>
+  <link href="https://knowledge-innovation-centre.github.io/HEIDI/Domains/EHEII" rel="canonical">
+  <meta content="70b5e2efebbac245adba20240d3386c4987586f8" name="document-revision">
 <style>/* style-autolinks */
 
 .css.css, .property.property, .descriptor.descriptor {
@@ -1708,16 +1702,17 @@ dfn > a.self-link::before      { content: "#"; }
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
-   <h1 class="p-name no-ref" id="title">Your Spec Title</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Draft Community Group Report, <time class="dt-updated" datetime="2020-10-26">26 October 2020</time></span></h2>
+   <h1 class="p-name no-ref" id="title">European Higher Education Institution Identifiers</h1>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard, <time class="dt-updated" datetime="2020-10-26">26 October 2020</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="Your spec url">Your spec url</a>
+     <dd><a class="u-url" href="https://knowledge-innovation-centre.github.io/HEIDI/Domains/EHEII">https://knowledge-innovation-centre.github.io/HEIDI/Domains/EHEII</a>
      <dt>Issue Tracking:
      <dd><a href="https://github.com/HEIDIrepo/EHEII/issues/">GitHub</a>
-     <dt class="editor">Editor:
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="http://example.com/your-personal-website">Your Name</a> (<a class="p-org org" href="http://example.com/your-company">Your Company</a>) <a class="u-email email" href="mailto:your-email@example.com">your-email@example.com</a>
+     <dt class="editor">Editors:
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:anthony@knowledgeinnovation.eu">Anthony F. Camilleri</a> (<a class="p-org org" href="https://knowledgeinnovation.eu">Knowledge Innovation Centre</a>)
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:colin.tueck@eqar.eu">Colin Tück</a> (<a class="p-org org" href="https://eqar.eu">European Quality Assurance Register</a>)
     </dl>
    </div>
    <div data-fill-with="warning"></div>
@@ -1731,13 +1726,64 @@ Parts of this work may be from another specification document.  If so, those par
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>A short description of your spec, one or two sentences.</p>
+   <p>Mission Statement of the HEIDI Initiative</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory">
-    <li><a href="#intro"><span class="secno">1</span> <span class="content">Introduction</span></a>
+    <li><a href="#relevance"><span class="secno">1</span> <span class="content">Relevance</span></a>
+    <li><a href="#currentsystems"><span class="secno">2</span> <span class="content">Existing systems</span></a>
+    <li>
+     <a href="#usecases"><span class="secno">3</span> <span class="content">Use Cases</span></a>
+     <ol class="toc">
+      <li><a href="#cross-check-institution-data"><span class="secno">3.1</span> <span class="content">Cross-check Institution Data</span></a>
+      <li><a href="#populate-edci-accreditation-database"><span class="secno">3.2</span> <span class="content">Populate EDCI Accreditation Database</span></a>
+      <li><a href="#correlate-datasets"><span class="secno">3.3</span> <span class="content">Correlate Datasets</span></a>
+      <li><a href="#list-higher-education-institutions"><span class="secno">3.4</span> <span class="content">List Higher Education Institutions</span></a>
+      <li><a href="#geographic-clustering"><span class="secno">3.5</span> <span class="content">Geographic Clustering</span></a>
+      <li><a href="#navigate-institutional-history"><span class="secno">3.6</span> <span class="content">Navigate Institutional History</span></a>
+     </ol>
+    <li>
+     <a href="#requirements"><span class="secno">4</span> <span class="content">Requirements</span></a>
+     <ol class="toc">
+      <li>
+       <a href="#identifier-requirements"><span class="secno">4.1</span> <span class="content">Identifier Requirements</span></a>
+       <ol class="toc">
+        <li><a href="#identifier-must-be-a-uri"><span class="secno">4.1.1</span> <span class="content">Identifier must be a URI</span></a>
+        <li><a href="#identifier-must-be-permanently-assigned-to-an-institution"><span class="secno">4.1.2</span> <span class="content">Identifier must be permanently assigned to an institution</span></a>
+        <li><a href="#identifier-must-be-resolvable-dereferencable"><span class="secno">4.1.3</span> <span class="content">Identifier must be resolvable / dereferencable</span></a>
+        <li><a href="#identifier-record-must-contain-minimum-dataset"><span class="secno">4.1.4</span> <span class="content">Identifier record must contain minimum dataset</span></a>
+       </ol>
+      <li>
+       <a href="#management-requirements"><span class="secno">4.2</span> <span class="content">Management Requirements</span></a>
+       <ol class="toc">
+        <li><a href="#identifiers-must-be-generated-by-trusted-issuer-organisations-in-a-federated-network"><span class="secno">4.2.1</span> <span class="content">Identifiers must be generated by trusted issuer organisations in a federated network</span></a>
+        <li><a href="#each-identifier-and-associated-record-must-be-controlled-owned-by-one-issuer"><span class="secno">4.2.2</span> <span class="content">Each Identifier and Associated record must be controlled/owned by one issuer</span></a>
+        <li><a href="#ownership-of-identifiers-and-associated-records-must-be-transferable-between-issuers"><span class="secno">4.2.3</span> <span class="content">Ownership of Identifiers and Associated records must be transferable between issuers</span></a>
+       </ol>
+      <li>
+       <a href="#interoperatbility-requirements"><span class="secno">4.3</span> <span class="content">Interoperatbility Requirements</span></a>
+       <ol class="toc">
+        <li><a href="#operators-using-identifiers-should-publish-their-use-in-a-central-open-register-together-with-method-to-search-connect-resolve-by-identifier"><span class="secno">4.3.1</span> <span class="content">Operators using Identifiers should publish their use in a central open register, together with method to search/connect/resolve by Identifier</span></a>
+        <li><a href="#a-namespace-must-define-a-url-under-their-own-domain-where-institutions-may-self-publish-data"><span class="secno">4.3.2</span> <span class="content">A namespace must define a URL under their own domain where institutions may self-publish data</span></a>
+        <li>
+         <a href="#a-central-hub-must-aggregate-all-heidi-identifiers-and-records"><span class="secno">4.3.3</span> <span class="content">A central hub must aggregate all HEIDI Identifiers and Records</span></a>
+         <ol class="toc">
+          <li><a href="#the-hub-must-index-all-aggregated-records"><span class="secno">4.3.3.1</span> <span class="content">The Hub must index all aggregated records</span></a>
+          <li><a href="#the-hub-must-allow-for-api-based-search-by-various-parameters-and-return-full-or-partial-records-in-response"><span class="secno">4.3.3.2</span> <span class="content">The Hub must allow for API-based search by various parameters and return full or partial records in response</span></a>
+          <li><a href="#the-hub-must-have-a-publicly-available-front-end"><span class="secno">4.3.3.3</span> <span class="content">The Hub must have a publicly available front-end</span></a>
+         </ol>
+       </ol>
+      <li>
+       <a href="#data-quality-requirements"><span class="secno">4.4</span> <span class="content">Data Quality Requirements</span></a>
+       <ol class="toc">
+        <li><a href="#heidi-records-must-be-verified-against-xsd-json-context-equivalent-before-publication"><span class="secno">4.4.1</span> <span class="content">HEIDI Records must be verified against XSD/JSON Context/equivalent before publication</span></a>
+        <li><a href="#a-challenge-mechanism-must-allow-for-issues-to-be-opened-against-identifiers"><span class="secno">4.4.2</span> <span class="content">A Challenge mechanism must allow for issues to be opened against identifiers</span></a>
+        <li><a href="#all-aspects-of-operations-must-be-governed-by-agreed-policies"><span class="secno">4.4.3</span> <span class="content">All aspects of operations must be governed by agreed policies</span></a>
+       </ol>
+     </ol>
+    <li><a href="#options"><span class="secno">5</span> <span class="content">Options</span></a>
     <li><a href="#conformance"><span class="secno"></span> <span class="content"> Conformance</span></a>
     <li>
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
@@ -1747,8 +1793,145 @@ Parts of this work may be from another specification document.  If so, those par
    </ol>
   </nav>
   <main>
-   <h2 class="heading settled" data-level="1" id="intro"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#intro"></a></h2>
-   <p>Introduction here.</p>
+   <h2 class="heading settled" data-level="1" id="relevance"><span class="secno">1. </span><span class="content">Relevance</span><a class="self-link" href="#relevance"></a></h2>
+   <p>Higher education institutions (HEIs) are a pivotal entity for many different systems and applications. Institutional identifiers are thus a matter of priority.</p>
+   <p>With less than 10000 HEIs in Europe the numbers are relatively managable, but yet large enough to warrant some standardisation to allow for data exchange without manual intervention or mapping.</p>
+   <h2 class="heading settled" data-level="2" id="currentsystems"><span class="secno">2. </span><span class="content">Existing systems</span><a class="self-link" href="#currentsystems"></a></h2>
+   <p>Various approaches already exist to identify higher education institutions in Europe:</p>
+   <table>
+    <thead>
+     <tr>
+      <td>Identifier
+      <td>Maintained by
+      <td>Used in
+      <td>Link
+      <td>Comment 
+    <tbody>
+     <tr>
+      <td>PIC
+      <td>EU
+      <td>EU programmes, European Student Card
+      <td><a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/how-to-participate/participant-register">EU portal</a>
+      <td>
+     <tr>
+      <td>Erasmus Institution Code
+      <td>EU
+      <td>Erasmus+
+      <td><a href="https://eacea.ec.europa.eu/erasmus-plus/actions/erasmus-charter_en">EU page</a>
+      <td>
+     <tr>
+      <td>eIDAS identifier
+      <td>EU
+      <td>Europass Digital Credentials
+      <td><a href="https://ec.europa.eu/digital-single-market/en/trust-services-and-eid">EU page</a>
+      <td>Just an organisational identifier. Not HE specific 
+     <tr>
+      <td>SHAC
+      <td>Géant
+      <td>ELMO, Emrex, EWP
+      <td>SHAC
+      <td>
+     <tr>
+      <td>ETER ID
+      <td>EU funded consortium
+      <td>ETER, OrgReg, DEQAR
+      <td>ETER
+      <td>
+     <tr>
+      <td>DEQARINST ID
+      <td>EQAR
+      <td>DEQAR
+      <td>DEQAR data set
+      <td>
+   </table>
+   <p>The <a href="https://github.com/erasmus-without-paper/ewp-specs-api-registry/#registry-service">EWP Registry Service</a> provides an accessible mapping between SCHAC, PIC and Erasmus codes for a number, but not all HEIs in Europe. The EU provides a <a href="https://eacea.ec.europa.eu/erasmus-plus/actions/erasmus-charter_en">spreadsheet</a> of Erasmus Institution Codes, including the related PIC code.</p>
+   <p>Given that each organisation has their own approach how to deal with demographic changes (e.g. mergers), there is not necessarily a one-to-one relationship between different identifiers.</p>
+   <p>In conclusion, existing identifiers for HEIs in Europe are currently not fully articulated to each other.</p>
+   <h2 class="heading settled" data-level="3" id="usecases"><span class="secno">3. </span><span class="content">Use Cases</span><a class="self-link" href="#usecases"></a></h2>
+   <p>The following use cases should be made possible/be facilitated by an enhanced approach to HEI identifiers.</p>
+   <p>**NB: This is an initial collection of use cases. We aim to supplement those with contributions from stakeholders during the discussion. Use cases should be defined in line with <a href="../Supporting/UseCaseTemplate.md">this template</a>.**</p>
+   <h3 class="heading settled" data-level="3.1" id="cross-check-institution-data"><span class="secno">3.1. </span><span class="content">Cross-check Institution Data</span><a class="self-link" href="#cross-check-institution-data"></a></h3>
+   <p><strong>Actor:</strong> HEI, recognition officer, student, employer</p>
+   <p><strong>Submitter:</strong> <a href="https://github.com/ctueck">Colin Tück</a></p>
+   <p><strong>User Story:</strong> The users receives data from or about a HEI, and wishes to automatically search another database for additional data about the HEI concerned.</p>
+   <p>For example, the user might recieve student mobility data, such as a transcript of records, via EMREX or EWP, or a qualification from a student applying for recognition. The user wants to acquire information on the sending institution’s quality assurance status from DEQAR.</p>
+   <p><strong>Restrictions:</strong> none</p>
+   <h3 class="heading settled" data-level="3.2" id="populate-edci-accreditation-database"><span class="secno">3.2. </span><span class="content">Populate EDCI Accreditation Database</span><a class="self-link" href="#populate-edci-accreditation-database"></a></h3>
+   <p><strong>Actor:</strong> Europass National Offices</p>
+   <p><strong>Submitter:</strong> <a href="https://github.com/anthonycamilleri">Anthony F. Camilleri</a></p>
+   <p><strong>User Story:</strong> The user wishes to collect national data on courses, qualifications and institutional/programme accreditations, and upload these to Europass to power the 'course search', as well as the 'accreditation check' for digitially signed credentials. The identifiers used for data collection at national level should ensure no duplication of data, while the identifiers sent to Europass should resolve back to the institutions, and also not be duplicated with identififiers from other Member States/data suppliers.</p>
+   <p><strong>Restrictions:</strong> All institutions in the database must be represented by a URI due to requirements arising from the <a href="https://www.w3.org/TR/vc-data-model/">W3C Verifiable Credentials</a> standard.</p>
+   <h3 class="heading settled" data-level="3.3" id="correlate-datasets"><span class="secno">3.3. </span><span class="content">Correlate Datasets</span><a class="self-link" href="#correlate-datasets"></a></h3>
+   <p><strong>Actor:</strong> researcher, policy maker, statistics office</p>
+   <p><strong>Submitter:</strong> <a href="https://github.com/ctueck">Colin Tück</a></p>
+   <p><strong>User Story:</strong> The user has data on a number of HEIs in Europe and wishes to correlate this with other data or statistics on the same HEIs, e.g. from ETER.</p>
+   <p><strong>Restrictions:</strong> none</p>
+   <h3 class="heading settled" data-level="3.4" id="list-higher-education-institutions"><span class="secno">3.4. </span><span class="content">List Higher Education Institutions</span><a class="self-link" href="#list-higher-education-institutions"></a></h3>
+   <p><strong>Actor:</strong> HEI, student, university staff</p>
+   <p><strong>Submitter:</strong> <a href="https://github.com/jeroenvl">Jeroen van Lent</a></p>
+   <p><strong>User Story:</strong> The user wishes to access a list of current Higher Education Institutions in Europe, and preferably also globally. This include names in English as well as in local language and also distinguish the business/brand name, should that be different from the legal name + official abbreviation. This list should be made available to a directory of HEIs as well as made available to various student information systems and student data exchange applications.</p>
+   <p><strong>Restrictions:</strong> none</p>
+   <h3 class="heading settled" data-level="3.5" id="geographic-clustering"><span class="secno">3.5. </span><span class="content">Geographic Clustering</span><a class="self-link" href="#geographic-clustering"></a></h3>
+   <p><strong>Actor:</strong> HEI, student, university staff</p>
+   <p><strong>Submitter:</strong> <a href="https://github.com/EuropeanUniversityFoundation">European University Foundation</a></p>
+   <p><strong>User Story:</strong> The user wishes to cluster HEIs by geographical location, preferably based on coordinates. (NUTS2 regions are not universally available beyond the EU.)</p>
+   <h3 class="heading settled" data-level="3.6" id="navigate-institutional-history"><span class="secno">3.6. </span><span class="content">Navigate Institutional History</span><a class="self-link" href="#navigate-institutional-history"></a></h3>
+   <p><strong>Actor:</strong> HEI, recognition officer, researcher</p>
+   <p><strong>Submitter:</strong> <a href="https://github.com/ctueck">Colin Tück</a></p>
+   <p><strong>User Story:</strong> The user wishes to identify HEIs by former names (including former institutions) and to follow (past or present) links between HEIs (e.g. consortia, merged institutions, spin offs, etc.).</p>
+   <p><strong>Restrictions:</strong> none</p>
+   <h2 class="heading settled" data-level="4" id="requirements"><span class="secno">4. </span><span class="content">Requirements</span><a class="self-link" href="#requirements"></a></h2>
+   <h3 class="heading settled" data-level="4.1" id="identifier-requirements"><span class="secno">4.1. </span><span class="content">Identifier Requirements</span><a class="self-link" href="#identifier-requirements"></a></h3>
+   <h4 class="heading settled" data-level="4.1.1" id="identifier-must-be-a-uri"><span class="secno">4.1.1. </span><span class="content">Identifier must be a URI</span><a class="self-link" href="#identifier-must-be-a-uri"></a></h4>
+   <h4 class="heading settled" data-level="4.1.2" id="identifier-must-be-permanently-assigned-to-an-institution"><span class="secno">4.1.2. </span><span class="content">Identifier must be permanently assigned to an institution</span><a class="self-link" href="#identifier-must-be-permanently-assigned-to-an-institution"></a></h4>
+   <h4 class="heading settled" data-level="4.1.3" id="identifier-must-be-resolvable-dereferencable"><span class="secno">4.1.3. </span><span class="content">Identifier must be resolvable / dereferencable</span><a class="self-link" href="#identifier-must-be-resolvable-dereferencable"></a></h4>
+   <h4 class="heading settled" data-level="4.1.4" id="identifier-record-must-contain-minimum-dataset"><span class="secno">4.1.4. </span><span class="content">Identifier record must contain minimum dataset</span><a class="self-link" href="#identifier-record-must-contain-minimum-dataset"></a></h4>
+    This dataset must include: 
+   <ul>
+    <li data-md>
+     <p>Basic legal data (name, registration authority, [address+geo], id number, country, URL)</p>
+    <li data-md>
+     <p>Issuer information</p>
+    <li data-md>
+     <p>Parent/child</p>
+    <li data-md>
+     <p>Support to record mergers, closures, suspensions etc.</p>
+    <li data-md>
+     <p>Changelog / historical data including</p>
+   </ul>
+   <h3 class="heading settled" data-level="4.2" id="management-requirements"><span class="secno">4.2. </span><span class="content">Management Requirements</span><a class="self-link" href="#management-requirements"></a></h3>
+   <h4 class="heading settled" data-level="4.2.1" id="identifiers-must-be-generated-by-trusted-issuer-organisations-in-a-federated-network"><span class="secno">4.2.1. </span><span class="content">Identifiers must be generated by trusted issuer organisations in a federated network</span><a class="self-link" href="#identifiers-must-be-generated-by-trusted-issuer-organisations-in-a-federated-network"></a></h4>
+   <h4 class="heading settled" data-level="4.2.2" id="each-identifier-and-associated-record-must-be-controlled-owned-by-one-issuer"><span class="secno">4.2.2. </span><span class="content">Each Identifier and Associated record must be controlled/owned by one issuer</span><a class="self-link" href="#each-identifier-and-associated-record-must-be-controlled-owned-by-one-issuer"></a></h4>
+   <h4 class="heading settled" data-level="4.2.3" id="ownership-of-identifiers-and-associated-records-must-be-transferable-between-issuers"><span class="secno">4.2.3. </span><span class="content">Ownership of Identifiers and Associated records must be transferable between issuers</span><a class="self-link" href="#ownership-of-identifiers-and-associated-records-must-be-transferable-between-issuers"></a></h4>
+   <h3 class="heading settled" data-level="4.3" id="interoperatbility-requirements"><span class="secno">4.3. </span><span class="content">Interoperatbility Requirements</span><a class="self-link" href="#interoperatbility-requirements"></a></h3>
+   <h4 class="heading settled" data-level="4.3.1" id="operators-using-identifiers-should-publish-their-use-in-a-central-open-register-together-with-method-to-search-connect-resolve-by-identifier"><span class="secno">4.3.1. </span><span class="content">Operators using Identifiers should publish their use in a central open register, together with method to search/connect/resolve by Identifier</span><a class="self-link" href="#operators-using-identifiers-should-publish-their-use-in-a-central-open-register-together-with-method-to-search-connect-resolve-by-identifier"></a></h4>
+   <h4 class="heading settled" data-level="4.3.2" id="a-namespace-must-define-a-url-under-their-own-domain-where-institutions-may-self-publish-data"><span class="secno">4.3.2. </span><span class="content">A namespace must define a URL under their own domain where institutions may self-publish data</span><a class="self-link" href="#a-namespace-must-define-a-url-under-their-own-domain-where-institutions-may-self-publish-data"></a></h4>
+   <h4 class="heading settled" data-level="4.3.3" id="a-central-hub-must-aggregate-all-heidi-identifiers-and-records"><span class="secno">4.3.3. </span><span class="content">A central hub must aggregate all HEIDI Identifiers and Records</span><a class="self-link" href="#a-central-hub-must-aggregate-all-heidi-identifiers-and-records"></a></h4>
+   <h5 class="heading settled" data-level="4.3.3.1" id="the-hub-must-index-all-aggregated-records"><span class="secno">4.3.3.1. </span><span class="content">The Hub must index all aggregated records</span><a class="self-link" href="#the-hub-must-index-all-aggregated-records"></a></h5>
+   <h5 class="heading settled" data-level="4.3.3.2" id="the-hub-must-allow-for-api-based-search-by-various-parameters-and-return-full-or-partial-records-in-response"><span class="secno">4.3.3.2. </span><span class="content">The Hub must allow for API-based search by various parameters and return full or partial records in response</span><a class="self-link" href="#the-hub-must-allow-for-api-based-search-by-various-parameters-and-return-full-or-partial-records-in-response"></a></h5>
+   <h5 class="heading settled" data-level="4.3.3.3" id="the-hub-must-have-a-publicly-available-front-end"><span class="secno">4.3.3.3. </span><span class="content">The Hub must have a publicly available front-end</span><a class="self-link" href="#the-hub-must-have-a-publicly-available-front-end"></a></h5>
+   <h3 class="heading settled" data-level="4.4" id="data-quality-requirements"><span class="secno">4.4. </span><span class="content">Data Quality Requirements</span><a class="self-link" href="#data-quality-requirements"></a></h3>
+   <h4 class="heading settled" data-level="4.4.1" id="heidi-records-must-be-verified-against-xsd-json-context-equivalent-before-publication"><span class="secno">4.4.1. </span><span class="content">HEIDI Records must be verified against XSD/JSON Context/equivalent before publication</span><a class="self-link" href="#heidi-records-must-be-verified-against-xsd-json-context-equivalent-before-publication"></a></h4>
+   <h4 class="heading settled" data-level="4.4.2" id="a-challenge-mechanism-must-allow-for-issues-to-be-opened-against-identifiers"><span class="secno">4.4.2. </span><span class="content">A Challenge mechanism must allow for issues to be opened against identifiers</span><a class="self-link" href="#a-challenge-mechanism-must-allow-for-issues-to-be-opened-against-identifiers"></a></h4>
+    Based on the GLEIF Challenge mechanism, such issues will be linked to the respective identifier, and must be resolved by the issuer. Issues can be opened by anybody via a front-end in respect to incorrect legal form, wrong parent/child , institution no longer operating etc. 
+   <h4 class="heading settled" data-level="4.4.3" id="all-aspects-of-operations-must-be-governed-by-agreed-policies"><span class="secno">4.4.3. </span><span class="content">All aspects of operations must be governed by agreed policies</span><a class="self-link" href="#all-aspects-of-operations-must-be-governed-by-agreed-policies"></a></h4>
+    These policies should include: 
+   <ul>
+    <li data-md>
+     <p>issuing identifiers</p>
+    <li data-md>
+     <p>responsibles for identifiers in jurisdictions/education levels etc</p>
+    <li data-md>
+     <p>avoiding duplicates</p>
+    <li data-md>
+     <p>how to represent mergers</p>
+    <li data-md>
+     <p>change of legal form, etc</p>
+    <li data-md>
+     <p>policy on resolving issues</p>
+   </ul>
+   <h2 class="heading settled" data-level="5" id="options"><span class="secno">5. </span><span class="content">Options</span><a class="self-link" href="#options"></a></h2>
+   <p>To be elaborated and discussed after first meeting.</p>
   </main>
   <div data-fill-with="conformance">
    <h2 class="no-ref no-num heading settled" id="conformance"><span class="content"> Conformance</span><a class="self-link" href="#conformance"></a></h2>
