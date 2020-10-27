@@ -3,35 +3,70 @@ Title: European Higher Education Institution Identifiers
 Shortname: EHEII
 Level: 1
 Status: LS
-URL: https://knowledge-innovation-centre.github.io/HEIDI/Domains/EHEII
+URL: https://heidirepo.github.io/EHEII
 Editor: Anthony F. Camilleri, Knowledge Innovation Centre https://knowledgeinnovation.eu, anthony@knowledgeinnovation.eu
 Editor: Colin Tück, European Quality Assurance Register https://eqar.eu, colin.tueck@eqar.eu
-Abstract: Mission Statement of the HEIDI Initiative
+Abstract: A proposal for an enhanced, interoperable approach to identifying higher education institutions in Europe
 Markup Shorthands: markdown yes
 </pre>   
 
-Relevance {#relevance}
-=====================
+Background {#background}
+========================
+
+## Relevance {#relevance}
 
 Higher education institutions (HEIs) are a pivotal entity for many different systems and applications. Institutional identifiers are thus a matter of priority.
 
 With less than 10000 HEIs in Europe the numbers are relatively managable, but yet large enough to warrant some standardisation to allow for data exchange without manual intervention or mapping.
 
-Existing systems {#currentsystems}
-=====================
+## Existing systems {#currentsystems}
 
 Various approaches already exist to identify higher education institutions in Europe:
 
-<table>
+<table class="data">
 <thead>
-<tr><td>Identifier<td>Maintained by<td>Used in<td>Link<td>Comment
+<tr><th>Identifier</th><th>Maintained by</th><th>Used in</th><th>Link</th><th>Comment</th></tr>
 </thead>
- <tr><td>PIC<td>EU<td>EU programmes, European Student Card<td>[EU portal](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/how-to-participate/participant-register)<td>
- <tr><td>Erasmus Institution Code<td>EU<td>Erasmus+<td>[EU page](https://eacea.ec.europa.eu/erasmus-plus/actions/erasmus-charter_en)<td>
- <tr><td>eIDAS identifier<td>EU<td>Europass Digital Credentials<td>[EU page](https://ec.europa.eu/digital-single-market/en/trust-services-and-eid)<td>Just an organisational identifier. Not HE specific
- <tr><td>SHAC<td>Géant<td>ELMO, Emrex, EWP<td>SHAC<td>
- <tr><td>ETER ID<td>EU funded consortium<td>ETER, OrgReg, DEQAR<td>ETER<td>
- <tr><td>DEQARINST ID<td>EQAR<td>DEQAR<td>DEQAR data set<td>
+<tbody>
+ <tr>
+  <td>PIC</td>
+  <td>EU</td>
+  <td>EU programmes, European Student Card</td>
+  <td>[EU portal](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/how-to-participate/participant-register)</td>
+ </tr><tr>
+  <td>Erasmus Institution Code</td>
+  <td>EU</td>
+  <td>Erasmus+</td>
+  <td>[EU page](https://eacea.ec.europa.eu/erasmus-plus/actions/erasmus-charter_en)</td>
+ </tr><tr>
+  <td>eIDAS identifier</td>
+  <td>EU</td>
+  <td>Europass Digital Credentials</td>
+  <td>[EU page](https://ec.europa.eu/digital-single-market/en/trust-services-and-eid)</td>
+  <td>General organisational identifier, not HE specific</td>
+ </tr><tr>
+  <td>SCHAC</td>
+  <td>Géant</td>
+  <td>ELMO, Emrex, EWP</td>
+  <td>[SCHAC](https://wiki.refeds.org/display/STAN/SCHAC)</td>
+ </tr><tr>
+  <td>ETER ID</td>
+  <td>EU-funded consortium</td>
+  <td>ETER, OrgReg, DEQAR</td>
+  <td>[ETER page](https://eter-project.com/#/home)</td>
+ </tr><tr>
+  <td>DEQARINST ID</td>
+  <td>EQAR</td>
+  <td>DEQAR</td>
+  <td>[DEQAR data](https://www.eqar.eu/qa-results/get-data/download-data-sets/)</td>
+ </tr><tr>
+  <td>Global WHED ID</td>
+  <td>IAU</td>
+  <td>WHED</td>
+  <td>[WHED page](https://www.whed.net/Faq.html)</td>
+  <td>World-wide coverage</td>
+</tr>
+</tbody>
 </table>
 
 The [EWP Registry Service](https://github.com/erasmus-without-paper/ewp-specs-api-registry/#registry-service) provides an accessible mapping between SCHAC, PIC and Erasmus codes for a number, but not all HEIs in Europe. The EU provides a [spreadsheet](https://eacea.ec.europa.eu/erasmus-plus/actions/erasmus-charter_en) of Erasmus Institution Codes, including the related PIC code.
