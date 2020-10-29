@@ -48,7 +48,7 @@ Various approaches already exist to identify higher education institutions in Eu
   <td>SCHAC</td>
   <td>Géant</td>
   <td>ELMO, Emrex, EWP</td>
-  <td>[SCHAC](https://wiki.refeds.org/display/STAN/SCHAC)</td>
+  <td><a href="https://wiki.refeds.org/display/STAN/SCHAC">SCHAC</a></td>
  </tr><tr>
   <td>ETER ID</td>
   <td>EU-funded consortium</td>
