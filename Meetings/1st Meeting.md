@@ -1,7 +1,7 @@
 # Meeting of the 1st HEIDI Group on European Higher Education Identifiers
 
 # Date & time
-https://doodle.com/poll/dxy86abbw48338fm
+17th December 2020 - 15:30-16:45
 
 # Agenda Items
 1. Introductions & Tour de Table
